@@ -5,7 +5,14 @@ void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MusicPro(),
+      home:Scaffold(
+        appBar: AppBar(
+          backgroundColor: Color(0xff00796B),
+          centerTitle: true,
+          title: Text("Audio Player"),
+        ),
+        body:  MusicPro(),
+      ),
     ),
   );
 }
@@ -18,6 +25,7 @@ void playSound(int? soundNumber) {
 Widget buildMusicButton({Color? color, int? soundNumber,String ? st}) {
   return Expanded(
     child: Container(
+      height: double.infinity ,
       decoration: BoxDecoration(
         border: Border.all(
           color: Color(0xff455A64),
